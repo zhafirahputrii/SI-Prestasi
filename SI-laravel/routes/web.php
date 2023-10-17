@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PrestasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/dataprestasi', function () {
-    return view('dataprestasi');
-});
-
-Route::get('/tambahprestasi', function () {
-    return view('tambahprestasi');
-});
+Route::get('prestasi', [PrestasiController::class , 'index'])->name('prestasi');
+        Route::get('add_prestasi', [PrestasiController::class , 'admin_add_prestasi']);
+        Route::post('prestasi', [PrestasiController::class , 'admin_create_prestasi']);
+        Route::get('/edit_prestasi/{id}', [PrestasiController::class , 'admin_edit_prestasi'])->name('edit_prestasi');
+        Route::post('update_prestasi/{id}', [PrestasiController::class , 'admin_update_prestasi']);
+        Route::get('prestasi/delete/{id}', [PrestasiController::class, 'admin_delete_prestasi']);

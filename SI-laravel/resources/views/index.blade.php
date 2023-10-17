@@ -55,9 +55,9 @@ header {
     <a href="#" class="logo">SI Prestasi</a>
     <div class="navbar"> 
 
-             <a href="/home">Home</a>
-             <a href="/dataprestasi">Prestasi</a>
-             <a href="/berita">Berita</a>
+             <a href="index">Home</a>
+             <a href="prestasi">Prestasi</a>
+             <a href="berita">Berita</a>
 </div>
     </header>
     <div class="welcome-content">
@@ -68,7 +68,7 @@ header {
     Sistem Informasi Pendataan Prestasi SMAN 8 
 </h1>
 
-<a href="/dataprestasi">Data Prestasi</a>
+<a href="/prestasi">Data Prestasi</a>
 </div>
    
 
