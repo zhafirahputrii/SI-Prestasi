@@ -57,7 +57,7 @@ class PrestasiController extends Controller
             'alamat' => 'required',
             'prestasi' => 'required',
             'tingkat' => 'required',
-            'date' => 'required',
+            'date' =>  'required|date',
         ]);
 
         $cek = [
